@@ -62,25 +62,18 @@ console.log(result3);
 
 
 //problem 4. find the largest string from array.
-// var names = ['afsana', 'rita', 'mitaa','eva', 'aymaan','ashraful']
-// function megaFriend (names){
-   
-// }
 
-//var str = ['afsana', 'rita', 'mitaa','eva', 'aymaan','ashraful']
-
-function findLongestWord(str) {
-    var strSplit = str.split(' ');
-    var longestWord = 0;
-    for(var i = 0; i < strSplit.length; i++){
-      if(strSplit[i].length > longestWord){
-      longestWord = strSplit[i].length;
-       }
+function megaFriend(arra){
+    var maxString = arra[0].length;
+    var largestName = arra[0];
+    for (var i = 1; i < arra.length; i++) {
+        var maxName = arra[i].length;
+        if (maxName > maxString) {
+            largestName = arra[i];
+            maxString = maxName;
+        }
     }
-    return longestWord;
-  }
-  findLongestWord("The quick brown fox jumped over the lazy dog");
-  console.log(findLongestWord);
-
-
-
+    return largestName;
+}
+var names = ['afsana', 'rita', 'mitaa','eva', 'aymaan','ashraful']
+console.log(megaFriend(names));
